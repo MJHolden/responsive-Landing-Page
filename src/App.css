@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: linear-gradient(azure, rgb(250, 131, 67));
+  background-repeat: no-repeat;
+  width: 100%;
+  font-family: "Titan One";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar {
+  background-color: rgb(9, 52, 72);
+  color: azure;
+  height: 70px;
+  position: fixed;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  top: 0;
+  border-radius: 0.5rem;
+
+  padding: 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.roshiLogo {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hamburger {
+  font-size: 35px;
+
+  cursor: pointer;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 58px;
+  background: rgb(9, 52, 72);
+  right: 0;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  display: none;
+  border-radius: 0.7rem;
+}
+
+.menuNav.showMenu {
+  width: 40%;
+  display: block;
+}
+
+a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: azure;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mainImg {
+  width: 100%;
+  margin-top: 100px;
+  background-position: center;
+  border-radius: 0.7rem;
+
+  box-shadow: 2px 2px 2px rgb(9, 52, 72);
+}
+.form {
+  width: 100%;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 3rem;
+}
+
+h1 {
+  color: azure;
+  text-shadow: 0 0 12px rgb(250, 131, 67);
+  font-size: 20px;
+}
+
+input {
+  border-radius: 7px;
+  border: none;
+  height: 25px;
+  background-color: azure;
+  font-family: "Titan One";
+  box-shadow: 2px 2px 2px rgb(9, 52, 72);
+}
+
+.submitBtn {
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(250, 131, 67);
+  color: azure;
+  font-family: "Titan One";
+  width: 120px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgb(9, 52, 72);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(9, 52, 72);
+}
+
+.imgList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  margin-right: 40px;
+}
+
+.artistImg {
+  height: 100px;
+  width: 100px;
+  border-radius: 1rem;
+  padding: 1px;
+  box-shadow: 2px 2px 2px rgb(9, 52, 72);
+}
+
+.footer {
+  background-color: rgb(9, 52, 72);
+  height: 320px;
+  border-radius: 0.7rem;
+  bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  color: azure;
+  padding-top: 30px;
+}
+
+.iconList {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 30px;
+  padding-top: 40px;
+}
+
+p {
+  text-align: center;
+  color: azure;
+  padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger {
+    display: none;
+  }
+
+  .menuNav {
+    display: block;
+    background: none;
+    top: 20px;
+    display: flex;
+    font-size: 15px;
+
+    width: 100%;
+  }
+
+  h1 {
+    transform: scale(3);
+    padding-top: 5px;
+  }
+
+  .input {
+    transform: scale(1.5);
+    margin-top: 25px;
+  }
+
+  .submitBtn {
+    transform: scale(2);
+    margin-top: 30px;
+  }
+  h2 {
+    padding-top: 30px;
+    transform: scale(2);
+  }
+  .imgList {
+    padding-top: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .artistImg {
+    height: 300px;
+    width: 300px;
+    margin: 0 20px 0 20px;
+  }
+
+  .listIcon {
+    font-size: 30px;
+  }
+
+  h3 {
+    transform: scale(2);
+  }
+
+  .footerP {
+    transform: scale(2);
+  }
+
+  .listIcon:hover {
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
+  }
+  .listIcon:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+  }
+  .submitBtn:hover {
+    transform: scale(2.3);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .submitBtn:not(:hover) {
+    transform: scale(2);
+    transition: transform 0.2s ease-in-out;
+  }
+  a:hover {
+    color: rgb(250, 131, 67);
+    transition: color 0.2s ease-in-out;
+  }
+
+  a:not(:hover) {
+    color: azure;
+    transition: color 0.2s ease-in-out;
   }
 }
