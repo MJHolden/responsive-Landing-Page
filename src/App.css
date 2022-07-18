@@ -165,6 +165,10 @@ p {
     margin: 0 auto;
   }
 
+  .navBar {
+    z-index: 1;
+  }
+
   .hamburger {
     display: none;
   }
@@ -194,7 +198,7 @@ p {
   }
   h2 {
     padding-top: 30px;
-    transform: scale(2);
+    font-size: 5vh;
   }
   .imgList {
     padding-top: 30px;
@@ -203,8 +207,8 @@ p {
   }
 
   .artistImg {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin: 0 20px 0 20px;
   }
 
@@ -213,11 +217,11 @@ p {
   }
 
   h3 {
-    transform: scale(2);
+    font-size: 5vh;
   }
 
   .footerP {
-    transform: scale(2);
+    font-size: 5vh;
   }
 
   .listIcon:hover {
