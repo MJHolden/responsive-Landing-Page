@@ -175,13 +175,12 @@ p {
     top: 20px;
     display: flex;
     font-size: 15px;
-
     width: 100%;
   }
 
   h1 {
-    transform: scale(3);
     padding-top: 5px;
+    font-size: 5vh;
   }
 
   .input {
